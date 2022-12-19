@@ -1,3 +1,6 @@
+Hello here I am sharing a simple microservice project. MyBlogProject, Daily and RegisterLogin projects are microservice projects. Daily and Blog projects work through the RegisterLogin Project. So RegisterLogin is the main project.
+
+
 docker container ls
 docker container stop 587830e964af  9aebe436b56d
 docker container rm e385d3511ae3  9aebe436b56d
