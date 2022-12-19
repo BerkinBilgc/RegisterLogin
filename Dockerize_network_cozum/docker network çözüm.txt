@@ -1,0 +1,31 @@
+Sıralama önemli olabilir.
+-------------------------------------------------------------
+
+producer
+localhost:9090
+docker build -f Dockerfile -t producer .
+docker images ls
+docker run -p 8080:8080  producer
+
+-------------------------------------------------------------
+
+consumer
+localhost:8080
+docker build -f Dockerfile -t consumer .
+docker images ls
+docker run -p 8080:8080  consumer
+
+-------------------------------------------------------------
+Conenction Refused
+
+docker network create --driver=bridge producer-consumer 
+docker network ls 
+
+Dikkat: consumer localhostunu karşı taraftaki containerADI yazmalısınız 
+server.port=8080
+producer.service.url=http://localhost:9090   YENİ HALI producer.service.url=http://producer:9090
+
+------------------------------------------------------------
+docker run -p 80:8080 --name=consumer --network producer-consumer  consumer
+docker run -p 90:8080 --name=producer --network producer-consumer  producer
+docker network inspect producer-consumer

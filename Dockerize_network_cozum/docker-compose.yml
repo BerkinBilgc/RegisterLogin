@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  register.jar:
+    container_name: register
+    image: register
+    restart: always
+    build: ./
+    ports:
+      - "1111:1111"
+
+    networks:
+      - daily_default
+
+networks:
+  daily_default:
+    name: daily
+    driver: bridge

@@ -1,0 +1,23 @@
+//Register
+POST /api/authentication/register HTTP/1.1
+Host: localhost:5555
+Content-Type: application/json
+Content-Length: 72
+
+{
+   "name":"name4",
+   "username":"root4",
+    "password":"root4"
+}
+
+
+//Login
+POST /api/authentication/login HTTP/1.1
+Host: localhost:5555
+Content-Type: application/json
+Content-Length: 51
+
+{
+   "username":"root4",
+   "password":"root4"
+}

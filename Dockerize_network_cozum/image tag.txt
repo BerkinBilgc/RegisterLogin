@@ -1,0 +1,17 @@
+
+docker  image ls
+docker  image tag --help
+docker  image rm -f IMAGEID
+docker  image rm -f edcfca03195b
+
+
+docker  tag IMAGEID javahamitmizrak/elastichsearch:latest
+docker  tag 911f580307ae javahamitmizrak/elastichsearch:latest
+docker  login
+docker  push javahamitmizrak/elastichsearch:latest
+
+
+docker  tag 911f580307ae javahamitmizrak/elastichsearch:1.0
+docker push javahamitmizrak/elastichsearch:1.0
+
+

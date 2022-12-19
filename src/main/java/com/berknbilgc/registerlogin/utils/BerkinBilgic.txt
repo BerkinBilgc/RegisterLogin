@@ -1,0 +1,12 @@
+Berkin Bilgic
+Atm Project: URL
+------------------------------
+Blog
+Api: LİST :localhost:2222/api/v1/blog/
+Api: delete
+Api: Create
+
+
+
+Daily
+Gatewat: URL

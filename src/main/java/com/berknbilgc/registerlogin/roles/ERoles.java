@@ -1,2 +1,5 @@
-package com.berknbilgc.registerlogin.roles;public class ERoles {
+package com.berknbilgc.registerlogin.roles;
+
+public enum ERoles {
+    ADMIN,WRITER,USER
 }
