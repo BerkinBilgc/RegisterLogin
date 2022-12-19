@@ -14,6 +14,7 @@ docker network create daily
 docker network create micro 
 bfd5dd5594ad2ffbd7ef4b00d7d63868316d46bb1e2100b9e824ac83560044ba
 
+//ınsert
 docker image ls 
 mainmicro.jar  
 daily.jar  
