@@ -1,0 +1,105 @@
+// REGISTER
+POST /api/authentication/register HTTP/1.1
+Host: localhost:1111
+Content-Type: application/json
+Content-Length: 83
+{
+     "username":"kullanıcı adı",
+     "name":"root",
+     "password":"root"
+}
+
+
+// LOGIN
+POST /api/authentication/login HTTP/1.1
+Host: localhost:1111
+Content-Type: application/json
+Content-Length: 53
+
+{
+     "username":"root",
+     "password":"root"
+}
+
+///////////////////////////////////////
+Daily
+//CREATE
+http://localhost:1111/gateway/daily
+POST /gateway/daily HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer
+Content-Type: application/json
+{
+    "dailyHeader":"header1",
+    "dailyContent":"içerik1",
+    "email":"hamitmizrak1@gmail.com",
+    "password":"Hm1234561@"
+}
+
+//LIST
+GET /gateway/daily HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer
+
+
+//FIND
+GET /gateway/daily/2 HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer
+
+//UPDATE
+PUT /gateway/daily/3 HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer
+
+//DELETE
+DELETE /gateway/daily/2 HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer
+
+///////////////////////////////////////
+Blog
+
+//CREATE
+POST /gateway/blog HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJyb290IiwidXNlcklkIjoxLCJyb2xlcyI6IlVTRVIiLCJleHAiOjE2Njk2NjM0ODV9.jgxisywoXfms1qa0CHmRbJPN6CVYie8o_jp_PPqirWYSM606jJVICFcitJT2VCFKFspjl70FDrOXaKDmAnLL9UYRIOVFKA45B34QhaqrHC2gbnjLNvXKlRfnDn0ln_CU-QWdJDMloO9vvu9G87B1qyvUG-vZ0Xjp_-fB2ssCTmhc06GdO1ONC-NPXUeufnYOz6QHEO3Fb7Ht0uDayI-8eLTMG04E8XBJ2wE8-AqjMYZGUDGHopbJJuDKKUUpf-ZPATwKhXUbY-U00LFYf0IyEZpjW24xIbQVejyFFVv-b-m2rnC39Apr0JGx_0FN7C8TCMNNHmz5yj2R8jP0Hxgaig
+Content-Type: application/json
+Content-Length: 109
+
+{
+    "id": null,
+    "blogHeader":"header123",
+    "blogContent":"icerik123",
+    "createdDate": null
+}
+
+//LIST
+
+GET /gateway/blog HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJyb290IiwidXNlcklkIjoxLCJyb2xlcyI6IlVTRVIiLCJleHAiOjE2Njk2NjM0ODV9.jgxisywoXfms1qa0CHmRbJPN6CVYie8o_jp_PPqirWYSM606jJVICFcitJT2VCFKFspjl70FDrOXaKDmAnLL9UYRIOVFKA45B34QhaqrHC2gbnjLNvXKlRfnDn0ln_CU-QWdJDMloO9vvu9G87B1qyvUG-vZ0Xjp_-fB2ssCTmhc06GdO1ONC-NPXUeufnYOz6QHEO3Fb7Ht0uDayI-8eLTMG04E8XBJ2wE8-AqjMYZGUDGHopbJJuDKKUUpf-ZPATwKhXUbY-U00LFYf0IyEZpjW24xIbQVejyFFVv-b-m2rnC39Apr0JGx_0FN7C8TCMNNHmz5yj2R8jP0Hxgaig
+
+//FIND
+GET /gateway/blog/1 HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJyb290IiwidXNlcklkIjoxLCJyb2xlcyI6IlVTRVIiLCJleHAiOjE2Njk2NjM0ODV9.jgxisywoXfms1qa0CHmRbJPN6CVYie8o_jp_PPqirWYSM606jJVICFcitJT2VCFKFspjl70FDrOXaKDmAnLL9UYRIOVFKA45B34QhaqrHC2gbnjLNvXKlRfnDn0ln_CU-QWdJDMloO9vvu9G87B1qyvUG-vZ0Xjp_-fB2ssCTmhc06GdO1ONC-NPXUeufnYOz6QHEO3Fb7Ht0uDayI-8eLTMG04E8XBJ2wE8-AqjMYZGUDGHopbJJuDKKUUpf-ZPATwKhXUbY-U00LFYf0IyEZpjW24xIbQVejyFFVv-b-m2rnC39Apr0JGx_0FN7C8TCMNNHmz5yj2R8jP0Hxgaig
+
+//UPDATE
+PUT /gateway/blog/1 HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJyb290IiwidXNlcklkIjoxLCJyb2xlcyI6IlVTRVIiLCJleHAiOjE2Njk2NjM0ODV9.jgxisywoXfms1qa0CHmRbJPN6CVYie8o_jp_PPqirWYSM606jJVICFcitJT2VCFKFspjl70FDrOXaKDmAnLL9UYRIOVFKA45B34QhaqrHC2gbnjLNvXKlRfnDn0ln_CU-QWdJDMloO9vvu9G87B1qyvUG-vZ0Xjp_-fB2ssCTmhc06GdO1ONC-NPXUeufnYOz6QHEO3Fb7Ht0uDayI-8eLTMG04E8XBJ2wE8-AqjMYZGUDGHopbJJuDKKUUpf-ZPATwKhXUbY-U00LFYf0IyEZpjW24xIbQVejyFFVv-b-m2rnC39Apr0JGx_0FN7C8TCMNNHmz5yj2R8jP0Hxgaig
+Content-Type: application/json
+Content-Length: 111
+
+{
+    "id": null,
+    "blogHeader":"headeredit",
+    "blogContent":"icerikedit",
+    "createdDate": null
+}
+
+//DELETE
+DELETE /gateway/blog/1 HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJyb290IiwidXNlcklkIjoxLCJyb2xlcyI6IlVTRVIiLCJleHAiOjE2Njk2NjM0ODV9.jgxisywoXfms1qa0CHmRbJPN6CVYie8o_jp_PPqirWYSM606jJVICFcitJT2VCFKFspjl70FDrOXaKDmAnLL9UYRIOVFKA45B34QhaqrHC2gbnjLNvXKlRfnDn0ln_CU-QWdJDMloO9vvu9G87B1qyvUG-vZ0Xjp_-fB2ssCTmhc06GdO1ONC-NPXUeufnYOz6QHEO3Fb7Ht0uDayI-8eLTMG04E8XBJ2wE8-AqjMYZGUDGHopbJJuDKKUUpf-ZPATwKhXUbY-U00LFYf0IyEZpjW24xIbQVejyFFVv-b-m2rnC39Apr0JGx_0FN7C8TCMNNHmz5yj2R8jP0Hxgaig
